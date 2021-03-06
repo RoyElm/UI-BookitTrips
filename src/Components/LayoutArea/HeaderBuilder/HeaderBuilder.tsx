@@ -7,6 +7,7 @@ import welcomeJpg from '../../../assets/images/welcome.jpg';
 import { NavLink } from "react-router-dom";
 import { ButtonBase } from "@material-ui/core";
 import "./HeaderBuilder.css";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 interface HeaderBuilderProps {
     isAdmin: number;
@@ -24,15 +25,15 @@ function HeaderBuilder(props: HeaderBuilderProps): JSX.Element {
 
     //Create Links and names to be fit in the imagesArray
     const AdminLinks = [
-        { to: "/welcome", name: "Home" },
-        { to: "/vacations", name: "Vacations" },
-        { to: "/add-vacation", name: "Add Vacation" },
-        { to: "/vacations/admin-watcher", name: "Admin Watcher" }
+        { to: GlobalPaths.homeUrl, name: "Home" },
+        { to: GlobalPaths.vacationListUrl, name: "Vacations" },
+        { to: GlobalPaths.addVacationUrl, name: "Add Vacation" },
+        { to: GlobalPaths.adminWatcherUrl, name: "Admin Watcher" }
     ];
 
     const UserLinks = [
-        { to: "/welcome", name: "Home" },
-        { to: "/vacations", name: "Vacations" }
+        { to: GlobalPaths.homeUrl, name: "Home" },
+        { to: GlobalPaths.vacationListUrl, name: "Vacations" }
     ];
 
     return (

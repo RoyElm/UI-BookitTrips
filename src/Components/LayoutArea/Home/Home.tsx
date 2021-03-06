@@ -1,10 +1,10 @@
 import React from "react";
-import "./WelcomePage.css";
+import "./Home.css";
 import { Email, GitHub, LinkedIn } from "@material-ui/icons";
 
-function WelcomePage(): JSX.Element {
+function Home(): JSX.Element {
     return (
-        <div className="WelcomePage">
+        <div className="Home">
             <div className="hero-text">
                 <h1>I'm Roy Elmakies </h1>
                 <h1>And Welcome to my Bookit Trip!!</h1>
@@ -16,4 +16,4 @@ function WelcomePage(): JSX.Element {
     );
 };
 
-export default WelcomePage;
+export default Home;

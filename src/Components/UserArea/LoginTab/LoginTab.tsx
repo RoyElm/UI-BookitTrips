@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 function LoginTab(): JSX.Element {
     return (
         <div className="LoginTab">
-            <NavLink to="/auth/login" >Login</NavLink>
+            <NavLink to={GlobalPaths.loginUrl} >Login</NavLink>
             <span>/</span>
-            <NavLink to="/auth/register">Register</NavLink>
+            <NavLink to={GlobalPaths.registerUrl}>Register</NavLink>
         </div>
     );
 }

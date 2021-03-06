@@ -12,6 +12,7 @@ import { Globals } from "../../../Services/Globals";
 import { changeDateFormat, logoutUser } from '../../../Services/GlobalHelpers'
 import { createTheme, creatingClasses } from '../../../Services/GlobalStylingMaker';
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 interface MatchParams {
     vacationId: string;
@@ -60,14 +61,14 @@ function EditVacation(props: vacationEditProps): JSX.Element {
                 myFormData.append("newImage", editedVacation.newImage.item(0));
             }
             await axios.put<VacationModel>(Globals.vacationUrl + vacationId, myFormData);
-            props.history.push("/vacations")
+            props.history.push(GlobalPaths.vacationListUrl)
 
         } catch (error) {
             //if user token has been expired he will be logout and rotate to Login Page
             if (error.response?.status === 403) {
                 logoutUser();
                 alert("Your session time has been Expired");
-                props.history.push("/auth/login");
+                props.history.push(GlobalPaths.loginUrl);
             } else {
                 alert(errorsService.getError(error));
             }

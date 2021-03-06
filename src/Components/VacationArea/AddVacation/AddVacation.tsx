@@ -11,6 +11,7 @@ import { Globals } from "../../../Services/Globals";
 import { changeDateFormat, logoutUser } from '../../../Services/GlobalHelpers'
 import { createTheme, creatingClasses } from '../../../Services/GlobalStylingMaker';
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 
 function AddVacation(): JSX.Element {
@@ -42,14 +43,14 @@ function AddVacation(): JSX.Element {
             myFormData.append("price", editedVacation.price.toString());
             myFormData.append("newImage", editedVacation.newImage.item(0));
             await axios.post<VacationModel>(Globals.vacationUrl, myFormData);
-            history.push("/vacations")
+            history.push(GlobalPaths.vacationListUrl)
 
         } catch (error) {
             //if user token has been expired he will be logout and rotate to Login Page
             if (error.response?.status === 403) {
                 logoutUser();
                 alert(errorsService.getError(error));
-                history.push("/auth/login");
+                history.push(GlobalPaths.loginUrl);
             }else {
                 alert(errorsService.getError(error));
             }

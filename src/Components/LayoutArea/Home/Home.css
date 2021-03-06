@@ -1,5 +1,5 @@
 /* The hero image */
-.WelcomePage  {
+.Home  {
 
     display: inline-block;
     box-shadow: 5px 10px 8px rgba(236, 230, 230, 0.5);
@@ -12,7 +12,7 @@
 }
   
 /* Place text in the middle of the image */
-.WelcomePage .hero-text {
+.Home .hero-text {
     position: relative;
     font-weight: bolder;
     text-decoration: 10px underline dotted white;
@@ -22,7 +22,7 @@
     color: #09144d;
 }
 
-.WelcomePage a {
+.Home a {
     display: inline-block;
     position: relative;
     font-size: larger;
@@ -32,6 +32,6 @@
     padding: 0;
     margin-left: 10px;
 }
-.WelcomePage a > * {
+.Home a > * {
     font-size: 50px;
 }

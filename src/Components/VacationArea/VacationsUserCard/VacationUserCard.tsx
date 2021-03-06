@@ -10,6 +10,7 @@ import { createStyles } from "../../../Services/GlobalStylingMaker";
 import { logoutUser } from "../../../Services/GlobalHelpers";
 import { useHistory } from "react-router-dom";
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 interface VacationUserCardProps {
     vacation: VacationModel;
@@ -51,7 +52,7 @@ function VacationUserCard(props: VacationUserCardProps): JSX.Element {
             if (error.response?.status === 403) {
                 logoutUser();
                 alert(errorsService.getError(error));
-                history.push("/auth/login");
+                history.push(GlobalPaths.loginUrl);
             }else {
                 alert(errorsService.getError(error));
             }

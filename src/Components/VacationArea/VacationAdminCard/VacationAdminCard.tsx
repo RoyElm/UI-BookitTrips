@@ -10,6 +10,7 @@ import axios from "axios";
 import { createStyles } from "../../../Services/GlobalStylingMaker";
 import { logoutUser } from "../../../Services/GlobalHelpers";
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 interface VacationAdminCardProps {
     vacation: VacationModel;
@@ -33,7 +34,7 @@ function VacationAdminCard(props: VacationAdminCardProps): JSX.Element {
             if (error.response?.status === 403) {
                 logoutUser();
                 alert(errorsService.getError(error));
-                history.push("/auth/login");
+                history.push(GlobalPaths.loginUrl);
             } else {
                 alert(errorsService.getError(error))
             }

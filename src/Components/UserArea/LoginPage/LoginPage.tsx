@@ -10,6 +10,7 @@ import { authLoggedInAction } from "../../../Redux/AuthState";
 import { authorizationHeader } from "../../../Services/GlobalHelpers";
 import { socketManagerInstance } from '../../../Socket.io/SocketManager';
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 function LoginPage(): JSX.Element {
 
@@ -41,7 +42,7 @@ function LoginPage(): JSX.Element {
 
             //function from Global function services that will add to Axios header user token.
             authorizationHeader(userLogged);
-            history.push("/vacations");
+            history.push(GlobalPaths.vacationListUrl);
         } catch (err) {
             alert(errorsService.getError(err))
         }
@@ -67,7 +68,7 @@ function LoginPage(): JSX.Element {
                         <input type="submit" value="Login" />
                     </div>
                     <div className="signup-link">
-                        Not a member? <NavLink to="/auth/register">Signup now</NavLink>
+                        Not a member? <NavLink to={GlobalPaths.registerUrl}>Signup now</NavLink>
                     </div>
                 </form>
             </div>

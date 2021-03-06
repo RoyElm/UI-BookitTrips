@@ -8,6 +8,7 @@ import { Globals } from "../../../Services/Globals";
 import store from "../../../Redux/Store";
 import { authRegisteredAction } from "../../../Redux/AuthState";
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 
 function RegisterPage(): JSX.Element {
@@ -27,7 +28,7 @@ function RegisterPage(): JSX.Element {
         try {
             await axios.post<RegisterModel>(Globals.authUrl + "register", newUser);
             store.dispatch(authRegisteredAction(newUser));
-            history.push("/auth/login");
+            history.push(GlobalPaths.loginUrl);
         }
         catch (err) {
             alert(errorsService.getError(err));
@@ -69,7 +70,7 @@ function RegisterPage(): JSX.Element {
                         <input type="submit" value="Register" />
                     </div>
                     <div className="login-link">
-                        <NavLink to="/auth/login">Login now</NavLink>
+                        <NavLink to={GlobalPaths.loginUrl}>Login now</NavLink>
                     </div>
                 </form>
             </div>

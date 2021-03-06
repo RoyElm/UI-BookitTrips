@@ -7,7 +7,6 @@ export class VacationsState {
         const vacations: VacationModel[] = JSON.parse(sessionStorage.getItem("vacations"));
         if (vacations && vacations.length) {
             const { userId } = JSON.parse(sessionStorage.getItem("auth")).user;
-
             //sorting the vacations array from SessionStorage. (Liked vacations will be first by specify userLogged);
             vacations.sort(v => v.followers && v.followers.includes(userId.toString()) ? -1 : 1);
             this.vacations = vacations;

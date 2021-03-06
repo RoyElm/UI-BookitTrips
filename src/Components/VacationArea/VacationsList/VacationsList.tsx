@@ -13,6 +13,7 @@ import { Unsubscribe } from "redux";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { logoutUser } from "../../../Services/GlobalHelpers";
 import { errorsService } from "../../../Services/GlobalErrorsService";
+import { GlobalPaths } from "../../../Services/GlobalPaths";
 
 interface VacationsListState {
     vacations: VacationModel[];
@@ -40,7 +41,7 @@ class VacationsList extends Component<VacationsListProps, VacationsListState> {
             //Handling unauthorized access from guest.
             if (!this.state.auth.isLoggedIn) {
                 alert("You are not authorized to access this page you have to Login");
-                return this.props.history.push("/auth/login");
+                return this.props.history.push(GlobalPaths.loginUrl);
             }
 
             const userId = this.state.auth.user.userId;
@@ -67,7 +68,7 @@ class VacationsList extends Component<VacationsListProps, VacationsListState> {
             if (error.response?.status === 403) {
                 logoutUser();
                 alert(errorsService.getError(error));
-                this.props.history.push("/auth/login");
+                this.props.history.push(GlobalPaths.loginUrl);
             } else {
                 alert(errorsService.getError(error))
             }
