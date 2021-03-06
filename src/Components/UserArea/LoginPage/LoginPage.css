@@ -1,0 +1,97 @@
+.LoginPage {
+    display: inline-block;
+}
+
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+.LoginPage .wrapper{
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.LoginPage .wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 80px;
+  color: #262626;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.LoginPage .wrapper form{
+  padding: 10px 30px 50px 60px;
+}
+.LoginPage .wrapper form .field{
+    position: relative;
+  height: 40px;
+  width: 80%;
+  margin-top: 30px;
+}
+.LoginPage .wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  padding-left: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.LoginPage .wrapper form .field input:focus,
+.LoginPage form .field input:valid{
+  border-color: #4158d0;
+}
+.LoginPage .wrapper form .field label{
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.LoginPage form .field input:focus ~ label,
+.LoginPage form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.LoginPage form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transition: all 0.3s ease;
+}
+.LoginPage form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+.LoginPage form .signup-link{
+    position: fixed;
+    margin-left: 10px;
+}
+
+.LoginPage form .signup-link a{
+  color: #4158d0;
+  text-decoration: none;
+}
+.LoginPage form .signup-link a:hover{
+  text-decoration: underline;
+}
+.field span {
+    float: right;
+    font-size: 15px;
+    display: block;
+}

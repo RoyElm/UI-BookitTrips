@@ -1,0 +1,37 @@
+.VacationAdminCard {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.VacationAdminCard .deleteCard{
+	position: relative;
+    color: red;
+    left: 160px;
+    bottom: 100px;
+}
+
+.VacationAdminCard .editCard{
+	position: relative;
+    color: red;
+    right: 160px;
+    bottom: 100px;
+}
+
+.VacationAdminCard .CardContent{
+	position: relative;
+    bottom: 45px;
+}
+
+.VacationAdminCard .descriptionContainer{
+    overflow: auto;
+    display: block;
+    word-wrap: break-word;
+    height: 150px;
+}
+
+.VacationAdminCard .countIcon .countFollowers{
+	position: relative;
+    right: 22px;
+}
+

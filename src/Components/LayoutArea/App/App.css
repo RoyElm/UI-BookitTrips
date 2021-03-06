@@ -1,0 +1,20 @@
+.App {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 20% 80%;
+    height: 100%;
+    overflow: auto;
+    background-image: url("../../../assets/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.App > header{
+    grid-column: span 6;
+}
+
+.App > main {
+    grid-column: span 6;
+}
