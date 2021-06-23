@@ -28,7 +28,6 @@ interface HeaderBuilderProps {
 
 //Used material ui documentation;
 function HeaderBuilder(props: HeaderBuilderProps): JSX.Element {
-
     //importing styles from Global styles function;
     const usingStyles = createHeadStyle();
 

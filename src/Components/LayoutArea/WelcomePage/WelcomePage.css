@@ -1,0 +1,37 @@
+/* The hero image */
+.WelcomePage  {
+
+    display: inline-block;
+    box-shadow: 5px 10px 8px rgba(236, 230, 230, 0.5);
+    justify-content: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: inherit no-repeat;
+    width: 70%; 
+    height: 450px; 
+}
+  
+/* Place text in the middle of the image */
+.WelcomePage .hero-text {
+    position: relative;
+    font-weight: bolder;
+    text-decoration: 10px underline dotted white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #09144d;
+}
+
+.WelcomePage a {
+    display: inline-block;
+    position: relative;
+    font-size: larger;
+    color: black;
+    top: 50%;
+    height: fit-content;
+    padding: 0;
+    margin-left: 10px;
+}
+.WelcomePage a > * {
+    font-size: 50px;
+}

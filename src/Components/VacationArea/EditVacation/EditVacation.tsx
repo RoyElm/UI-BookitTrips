@@ -104,7 +104,6 @@ function EditVacation(props: vacationEditProps): JSX.Element {
                         label="From Date" InputLabelProps={{ shrink: true }}
                         type="date" variant="outlined" className={classes.textBox}
                         inputProps={{ min: changeDateFormat(new Date().toString()), max: "2030-01-01" }}
-
                         //Setting min to "toDate" input that will not able to Admin to use old date then the one has been chosen
                         onChange={e => setFromDateValidation(e.target.value)} required />
                     <br />
