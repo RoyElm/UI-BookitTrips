@@ -1,0 +1,34 @@
+.VacationUserCard {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.VacationUserCard .CardContent{
+	position: relative;
+    bottom: 100px;
+}
+
+.VacationUserCard .FavoriteIcon{
+	position: relative;
+    left: 145px;
+    bottom: 95px;
+}
+
+.VacationUserCard .countIcon{
+    top: 300px;
+    left: 145px;
+}
+
+.VacationUserCard .countIcon .countFollowers{
+	position: relative;
+    right: 23px;
+}
+
+.VacationUserCard .descriptionContainer{
+    overflow: auto;
+    display: block;
+    word-wrap: break-word;
+    height: 150px;
+}
+
+

@@ -1,0 +1,23 @@
+.Header {
+    height: 100%;
+    display: block;
+}
+.Header *{
+    margin: 0;
+}
+.Header h1{
+    font-size: 52px;
+    background: -webkit-linear-gradient(#eee, rgba(14, 8, 6, 0.938));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Header .navBarHead a{
+    position: relative;
+    margin-left: 10px;
+    color:#5eceeb;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px #253372 ;
+    background-color: #253372;
+}

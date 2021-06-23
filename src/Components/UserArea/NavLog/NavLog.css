@@ -1,0 +1,16 @@
+.NavLog {
+    position: fixed;
+    left: 10px;
+    top: 20px;
+}
+
+.NavLog a ,.NavLog span{
+    color: #262626;
+}
+.long-menu {
+    max-height: 215px;
+    width: 20ch;
+}
+.NavLog .avatar {
+    cursor:pointer;
+}

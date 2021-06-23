@@ -1,0 +1,11 @@
+.AddVacation{
+    margin: auto;
+    width: 100%;
+}
+.AddVacation form{
+    margin: auto;
+    width: 32%;
+}
+.AddVacation  form *{
+    color: rgb(5, 34, 15);
+}
